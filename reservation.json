@@ -1,0 +1,25 @@
+{
+    "record": [
+        {
+            "phoneNumber": "+37245678988",
+            "name": "Boris Borisov",
+            "time": "2023-10-11 12:34:11",
+            "service": "Service A",
+            "carNumber": "101BYN"
+        },
+        {
+            "phoneNumber": "+37212348979",
+            "name": "Denis Denisov",
+            "time": "2023-10-17 17:12:35",
+            "service": "Service A",
+            "carNumber": "999ROZ"
+        },
+        {
+            "phoneNumber": "+37219948789",
+            "name": "Anna Annova",
+            "time": "2023-11-01 16:12:14",
+            "service": "Service A",
+            "carNumber": "148BKM"
+        }
+    ]
+}
