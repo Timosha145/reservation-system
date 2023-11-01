@@ -1,11 +1,13 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:param name="serviceFilter" />
+
     <xsl:template match="/">
         <html>
             <head>
                 <title>Records</title>
             </head>
             <body>
-                <h1>Records</h1>
                 <table border="1">
                     <tr>
                         <th>Phone Number</th>
@@ -14,7 +16,7 @@
                         <th>Service</th>
                         <th>Car Number</th>
                     </tr>
-                    <xsl:apply-templates select="records/record" />
+                    <xsl:apply-templates select="records/record[service=$serviceFilter or $serviceFilter = '']" />
                 </table>
             </body>
         </html>
