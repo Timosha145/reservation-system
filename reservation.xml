@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+    <record>
+        <phoneNumber>+37245678988</phoneNumber>
+        <name>Boris Borisov</name>
+        <time>2023-10-11 12:34:11</time>
+        <service>Service A</service>
+        <carNumber>101BYN</carNumber>
+    </record>
+    <record>
+        <phoneNumber>+37212348979</phoneNumber>
+        <name>Denis Denisov</name>
+        <time>2023-10-17 17:12:35</time>
+        <service>Service A</service>
+        <carNumber>999ROZ</carNumber>
+    </record>
+    <record>
+        <phoneNumber>+37219948789</phoneNumber>
+        <name>Anna Annova</name>
+        <time>2023-11-01 16:12:14</time>
+        <service>Service A</service>
+        <carNumber>148BKM</carNumber>
+    </record>
+</records>
