@@ -60,19 +60,22 @@ if (isset($_POST['add'])) {
 <html lang="et">
 <head>
     <title>Auto Hoolduse Broneeringud</title>
+    <link rel="stylesheet" type="text/css" href="reservationsStyle.css">
 </head>
 <body>
 <h1>Auto Hoolduse Broneeringud</h1>
 
 <form>
-    <label for="service-select">Vali Autoteenindus: </label>
-    <select id="service-select" name="service">
-        <option value="">Kõik Autoteenindused</option>
-        <option value="Service A">Service A</option>
-        <option value="Service B">Service B</option>
-    </select>
-    <input type="submit" value="Filter">
+    <div id="serviceDiv">
+        <select id="service-select" name="service" style="flex: 1;">
+            <option value="">Kõik Autoteenindused </option>
+            <option value="Service A">Service A</option>
+            <option value="Service B">Service B</option>
+        </select>
+        <input type="submit" id="filterButton" value="Filter">
+    </div>
 </form>
+
 
 <table border="1">
     <tr>
@@ -89,7 +92,7 @@ if (isset($_POST['add'])) {
             <td/>
             <td><input type="tel" name="phone" placeholder="+37200111222" pattern="^(\+[0-9]+|[0-9]+)" title="Vale telefoninumber!" required></td>
             <td><input type="text" name="name" placeholder="Nimi" pattern="[A-Za-z\s]+" title="Ainult ladina tähed!" required></td>
-            <td><input type="datetime-local" name="time" placeholder="Time and Date" required></td>
+            <td><input type="datetime-local" name="time" required></td>
             <td>
                 <select name="service" required>
                     <option value="">Vali</option>

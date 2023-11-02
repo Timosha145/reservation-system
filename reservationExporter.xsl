@@ -24,7 +24,7 @@
             <td>
                 <form method="post" action="reservations.php">
                     <input type="hidden" name="delete_id" value="{@id}"/>
-                    <button type="submit" name="delete">Delete</button>
+                    <input type="submit" name="delete" value="Kustuta"/>
                 </form>
             </td>
         </tr>
