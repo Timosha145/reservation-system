@@ -1,1 +1,114 @@
-{}
+{
+    "record": [
+        {
+            "@attributes": {
+                "id": "1"
+            },
+            "phoneNumber": "+37245678988",
+            "name": "Boris Borisov",
+            "time": "2023-10-11 12:34",
+            "service": "Service A",
+            "carNumber": "101BYN"
+        },
+        {
+            "@attributes": {
+                "id": "2"
+            },
+            "phoneNumber": "+37212348979",
+            "name": "Denis Denisov",
+            "time": "2023-10-17 17:12",
+            "service": "Service A",
+            "carNumber": "999ROZ"
+        },
+        {
+            "@attributes": {
+                "id": "3"
+            },
+            "phoneNumber": "+37219948789",
+            "name": "Anna Annova",
+            "time": "2023-11-01 16:12",
+            "service": "Service B",
+            "carNumber": "148BKM"
+        },
+        {
+            "@attributes": {
+                "id": "4"
+            },
+            "phoneNumber": "+37288987178",
+            "name": "Egor Egorov",
+            "time": "2023-11-01 10:24",
+            "service": "Service A",
+            "carNumber": "100EGO"
+        },
+        {
+            "@attributes": {
+                "id": "5"
+            },
+            "phoneNumber": "+37255555555",
+            "name": "John Doe",
+            "time": "2023-11-05 09:30",
+            "service": "Service A",
+            "carNumber": "555XYZ"
+        },
+        {
+            "@attributes": {
+                "id": "6"
+            },
+            "phoneNumber": "+37298765432",
+            "name": "Mary Johnson",
+            "time": "2023-11-07 14:45",
+            "service": "Service B",
+            "carNumber": "777ABC"
+        },
+        {
+            "@attributes": {
+                "id": "7"
+            },
+            "phoneNumber": "+37211112233",
+            "name": "Michael Smith",
+            "time": "2023-11-12 18:15",
+            "service": "Service A",
+            "carNumber": "123XYZ"
+        },
+        {
+            "@attributes": {
+                "id": "8"
+            },
+            "phoneNumber": "+37233334444",
+            "name": "Lisa Williams",
+            "time": "2023-11-15 22:30",
+            "service": "Service B",
+            "carNumber": "888ZZZ"
+        },
+        {
+            "@attributes": {
+                "id": "9"
+            },
+            "phoneNumber": "+37277778888",
+            "name": "James Brown",
+            "time": "2023-11-18 10:00",
+            "service": "Service A",
+            "carNumber": "444BBB"
+        },
+        {
+            "@attributes": {
+                "id": "10"
+            },
+            "phoneNumber": "+37266669999",
+            "name": "Sarah White",
+            "time": "2023-11-21 15:20",
+            "service": "Service B",
+            "carNumber": "999AAA"
+        },
+        {
+            "@attributes": {
+                "id": "11"
+            },
+            "phoneNumber": "+37278915798",
+            "name": "Renat Renatov",
+            "time": "2023-09-21 13:36",
+            "service": "Service B",
+            "carNumber": "899RTY"
+        }
+    ]
+}

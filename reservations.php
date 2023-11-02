@@ -11,7 +11,7 @@ $serviceFilter = $_GET['service'] ?? '';
 $proc->setParameter('', 'serviceFilter', $serviceFilter);
 $proc->importStyleSheet($xsl);
 
-if (isset($_POST['delete']) && isset($_POST['delete_id'])) {
+if (isset($_POST['delete'])) {
     $idToDelete = intval($_POST['delete_id']);
     $records = $xml->getElementsByTagName('record');
 
@@ -63,7 +63,15 @@ if (isset($_POST['add'])) {
     <link rel="stylesheet" type="text/css" href="reservationsStyle.css">
 </head>
 <body>
-<h1>Auto Hoolduse Broneeringud</h1>
+
+<nav>
+    <ul>
+        <li><a href="reservations.php">XML versioon</a></li>
+        <li><a href="reservationsJson.php">Json versioon</a></li>
+    </ul>
+</nav>
+
+<h1>Auto Hoolduse Broneeringud (XML veersion)</h1>
 
 <form>
     <div id="serviceDiv">
@@ -75,7 +83,6 @@ if (isset($_POST['add'])) {
         <input type="submit" id="filterButton" value="Filter">
     </div>
 </form>
-
 
 <table border="1">
     <tr>
