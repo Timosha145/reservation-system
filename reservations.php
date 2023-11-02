@@ -11,19 +11,47 @@ $serviceFilter = $_GET['service'] ?? '';
 $proc->setParameter('', 'serviceFilter', $serviceFilter);
 $proc->importStyleSheet($xsl);
 
-// Обработка добавления новой записи
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['delete']) && isset($_POST['delete_id'])) {
+    $idToDelete = intval($_POST['delete_id']);
+    $records = $xml->getElementsByTagName('record');
+
+    foreach ($records as $record) {
+        $recordId = intval($record->getAttribute('id'));
+
+        if ($recordId === $idToDelete) {
+            $record->parentNode->removeChild($record);
+            $xml->save('reservation.xml');
+            break;
+        }
+    }
+
+    header('Location: reservations.php');
+    exit();
+}
+
+if (isset($_POST['add'])) {
+    $records = $xml->getElementsByTagName('record');
+
+    $lastRecord = $records->item($records->length - 1);
+    $lastId = $lastRecord ? intval($lastRecord->getAttribute('id')) : 0;
+
     $newRecord = $xml->createElement('record');
+    $newRecord->setAttribute('id', $lastId + 1);
+
     $newRecord->appendChild($xml->createElement('phoneNumber', $_POST['phone']));
     $newRecord->appendChild($xml->createElement('name', $_POST['name']));
-    $newRecord->appendChild($xml->createElement('time', $_POST['time']->format('Y-m-d H:i:s')));
+
+    $dateTime = DateTime::createFromFormat('Y-m-d\TH:i', $_POST['time']);
+    $formattedTime = $dateTime->format('Y-m-d H:i');
+
+    $newRecord->appendChild($xml->createElement('time', $formattedTime));
     $newRecord->appendChild($xml->createElement('service', $_POST['service']));
     $newRecord->appendChild($xml->createElement('carNumber', $_POST['car']));
+
     $xml->getElementsByTagName('records')->item(0)->appendChild($newRecord);
     $xml->save('reservation.xml');
 
-    // После успешного добавления перенаправляем пользователя на эту же страницу для предотвращения повторной отправки формы
-    header('Location: reservation.php');
+    header('Location: reservations.php');
     exit();
 }
 ?>
@@ -48,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <table border="1">
     <tr>
+        <th>Id</th>
         <th>Telefoninumber</th>
         <th>Nimi</th>
         <th>Aeg</th>
@@ -57,8 +86,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </tr>
     <form method="post">
         <tr>
+            <td/>
             <td><input type="tel" name="phone" placeholder="+37200111222" pattern="^(\+[0-9]+|[0-9]+)" title="Vale telefoninumber!" required></td>
-            <td><input type="text" name="name" placeholder="Nimi" pattern="[A-Za-z\s]+" title="Ainult tähed!" required></td>
+            <td><input type="text" name="name" placeholder="Nimi" pattern="[A-Za-z\s]+" title="Ainult ladina tähed!" required></td>
             <td><input type="datetime-local" name="time" placeholder="Time and Date" required></td>
             <td>
                 <select name="service" required>
@@ -68,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </select>
             </td>
             <td><input type="text" name="car" placeholder="Autonumber" pattern="[A-Za-z0-9]+" title="Vale autonumber!" required></td>
-            <td><input type="submit" value="Add Record"></td>
+            <td><input type="submit" name="add" value="Lisa"></td>
             <?php
             echo $proc->transformToXML($xml);
             ?>

@@ -15,11 +15,18 @@
 
     <xsl:template match="record">
         <tr>
+            <td><xsl:value-of select="@id" /></td>
             <td><xsl:value-of select="phoneNumber" /></td>
             <td><xsl:value-of select="name" /></td>
             <td><xsl:value-of select="time" /></td>
             <td><xsl:value-of select="service" /></td>
             <td><xsl:value-of select="carNumber" /></td>
+            <td>
+                <form method="post" action="reservations.php">
+                    <input type="hidden" name="delete_id" value="{@id}"/>
+                    <button type="submit" name="delete">Delete</button>
+                </form>
+            </td>
         </tr>
     </xsl:template>
 </xsl:stylesheet>

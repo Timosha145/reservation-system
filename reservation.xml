@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <records>
-    <record>
+    <record id="1">
         <phoneNumber>+37245678988</phoneNumber>
         <name>Boris Borisov</name>
-        <time>2023-10-11 12:34:11</time>
+        <time>2023-10-11 12:34</time>
         <service>Service A</service>
         <carNumber>101BYN</carNumber>
     </record>
-    <record>
+    <record id="2">
         <phoneNumber>+37212348979</phoneNumber>
         <name>Denis Denisov</name>
-        <time>2023-10-17 17:12:35</time>
+        <time>2023-10-17 17:12</time>
         <service>Service A</service>
         <carNumber>999ROZ</carNumber>
     </record>
-    <record>
+    <record id="3">
         <phoneNumber>+37219948789</phoneNumber>
         <name>Anna Annova</name>
-        <time>2023-11-01 16:12:14</time>
+        <time>2023-11-01 16:12</time>
         <service>Service B</service>
         <carNumber>148BKM</carNumber>
     </record>
-<record><phoneNumber>+37288987178</phoneNumber><name>Egor Egorov</name><time>2023-11-01T10:24</time><service>Service A</service><carNumber>100EGO</carNumber></record></records>
+    <record id="4">
+        <phoneNumber>+37288987178</phoneNumber>
+        <name>Egor Egorov</name>
+        <time>2023-11-01 10:24</time>
+        <service>Service A</service>
+        <carNumber>100EGO</carNumber>
+    </record>
+    <record id="5">
+        <phoneNumber>+37255555555</phoneNumber>
+        <name>John Doe</name>
+        <time>2023-11-05 09:30</time>
+        <service>Service A</service>
+        <carNumber>555XYZ</carNumber>
+    </record>
+    <record id="6">
+        <phoneNumber>+37298765432</phoneNumber>
+        <name>Mary Johnson</name>
+        <time>2023-11-07 14:45</time>
+        <service>Service B</service>
+        <carNumber>777ABC</carNumber>
+    </record>
+    <record id="7">
+        <phoneNumber>+37211112233</phoneNumber>
+        <name>Michael Smith</name>
+        <time>2023-11-12 18:15</time>
+        <service>Service A</service>
+        <carNumber>123XYZ</carNumber>
+    </record>
+    <record id="8">
+        <phoneNumber>+37233334444</phoneNumber>
+        <name>Lisa Williams</name>
+        <time>2023-11-15 22:30</time>
+        <service>Service B</service>
+        <carNumber>888ZZZ</carNumber>
+    </record>
+    <record id="9">
+        <phoneNumber>+37277778888</phoneNumber>
+        <name>James Brown</name>
+        <time>2023-11-18 10:00</time>
+        <service>Service A</service>
+        <carNumber>444BBB</carNumber>
+    </record>
+    <record id="10">
+        <phoneNumber>+37266669999</phoneNumber>
+        <name>Sarah White</name>
+        <time>2023-11-21 15:20</time>
+        <service>Service B</service>
+        <carNumber>999AAA</carNumber>
+    </record>
+</records>
