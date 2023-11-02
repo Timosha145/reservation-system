@@ -21,4 +21,4 @@
         <service>Service B</service>
         <carNumber>148BKM</carNumber>
     </record>
-</records>
+<record><phoneNumber>+37288987178</phoneNumber><name>Egor Egorov</name><time>2023-11-01T10:24</time><service>Service A</service><carNumber>100EGO</carNumber></record></records>

@@ -8,16 +8,7 @@
                 <title>Records</title>
             </head>
             <body>
-                <table border="1">
-                    <tr>
-                        <th>Phone Number</th>
-                        <th>Name</th>
-                        <th>Time</th>
-                        <th>Service</th>
-                        <th>Car Number</th>
-                    </tr>
-                    <xsl:apply-templates select="records/record[service=$serviceFilter or $serviceFilter = '']" />
-                </table>
+                <xsl:apply-templates select="records/record[service=$serviceFilter or $serviceFilter = '']" />
             </body>
         </html>
     </xsl:template>
